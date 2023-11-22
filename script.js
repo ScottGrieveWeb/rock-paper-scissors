@@ -24,39 +24,41 @@ function playRound(playerAnswer, computerSelection) {
     if (playerAnswer == "rock") {
         switch(computerSelection){
             case "rock":
-                alert("You draw! Rock ties with Rock.");
+                console.log("You draw! Rock ties with Rock.");
                 break;
             case "paper":
-                alert("You lose! Paper beats Rock.");
+                console.log("You lose! Paper beats Rock.");
                 break;
             case "scissors":
-                alert("You win! Rock beats Scissors.");
+                console.log("You win! Rock beats Scissors.");
                 break;
         }
     } else if (playerAnswer == "paper") {
         switch(computerSelection){
             case "rock":
-                alert("You win! Paper beats Rock.");
+                console.log("You win! Paper beats Rock.");
                 break;
             case "paper":
-                alert("You draw! Paper ties with Paper.");
+                console.log("You draw! Paper ties with Paper.");
                 break;
             case "scissors":
-                alert("You lose! Paper loses to Scissors.");
+                console.log("You lose! Paper loses to Scissors.");
                 break;
         }
     } else if (playerAnswer == "scissors") {
         switch(computerSelection){
             case "rock":
-                alert("You lose! Scissors loses to Rock.");
+                console.log("You lose! Scissors loses to Rock.");
                 break;
             case "paper":
-                alert("You win! Scissors beat Paper.");
+                console.log("You win! Scissors beat Paper.");
                 break;
             case "scissors":
-                alert("You draw! Scissors ties with Scissors.");
+                console.log("You draw! Scissors ties with Scissors.");
                 break;
         }
+    } else {
+        console.log("That is an invalid choice, please refresh and start the game again!");
     }
 }
 
@@ -65,4 +67,23 @@ function playRound(playerAnswer, computerSelection) {
 // console.log(playerAnswer);
 // console.log(computerSelection);
 // console.log(playRound(playerAnswer, computerSelection));
+
+function game() {
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        const playerAnswer = playerSelection();
+        const computerSelection = getComputerChoice();
+
+        let currentRound = playRound(playerAnswer, computerSelection);
+
+        console.log(currentRound);
+
+    }
+}
+
+console.log(game());
+
 
