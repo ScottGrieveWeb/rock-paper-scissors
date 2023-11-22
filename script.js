@@ -30,15 +30,39 @@ function playRound(playerAnswer, computerSelection) {
                 alert("You lose! Paper beats Rock.");
                 break;
             case "scissors":
-                alert("You win! Rock beats Scissots.");
+                alert("You win! Rock beats Scissors.");
+                break;
+        }
+    } else if (playerAnswer == "paper") {
+        switch(computerSelection){
+            case "rock":
+                alert("You win! Paper beats Rock.");
+                break;
+            case "paper":
+                alert("You draw! Paper ties with Paper.");
+                break;
+            case "scissors":
+                alert("You lose! Paper loses to Scissors.");
+                break;
+        }
+    } else if (playerAnswer == "scissors") {
+        switch(computerSelection){
+            case "rock":
+                alert("You lose! Scissors loses to Rock.");
+                break;
+            case "paper":
+                alert("You win! Scissors beat Paper.");
+                break;
+            case "scissors":
+                alert("You draw! Scissors ties with Scissors.");
                 break;
         }
     }
 }
 
-const playerAnswer = playerSelection();
-const computerSelection = getComputerChoice();
-console.log(playerAnswer);
-console.log(computerSelection);
-console.log(playRound(playerAnswer, computerSelection));
+// const playerAnswer = playerSelection();
+// const computerSelection = getComputerChoice();
+// console.log(playerAnswer);
+// console.log(computerSelection);
+// console.log(playRound(playerAnswer, computerSelection));
 
