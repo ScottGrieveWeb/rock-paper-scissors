@@ -13,5 +13,11 @@ function getComputerChoice(){
     }
 }
 
+function playerSelection(){
+    let promptPlayer = prompt("Rock, Paper, or Scissors?");
+    let playerChoice = promptPlayer.toLowerCase();
+
+    return playerChoice;
+}
 
 
