@@ -88,7 +88,17 @@ function game() {
 
         let currentRound = playRound(playerAnswer, computerSelection);
 
-        console.log(currentRound);
+         console.log(currentRound);
+         console.log(result);
+
+        if (result === "win"){
+            playerScore++;
+        } else if (result === "lose") {
+            computerScore++;
+        }
+
+        // console.log(playerScore);
+        // console.log(computerScore);
 
     }
 }
