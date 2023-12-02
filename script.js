@@ -104,6 +104,13 @@ function game() {
     }
 }
 
-console.log(game());
+let rockBttn = document.querySelector("rock");
+
+rockBttn.addEventListener('click', () => {
+    playRound("rock", getComputerSelection());
+    
+  });
+
+// console.log(game());
 
 
