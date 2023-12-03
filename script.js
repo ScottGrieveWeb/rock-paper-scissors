@@ -104,12 +104,18 @@ function game() {
     }
 }
 
-let rockBttn = document.querySelector("rock");
 
-rockBttn.addEventListener('click', () => {
-    playRound("rock", getComputerSelection());
-    
-  });
+const rockBtn = document.getElementById("rock");
+
+
+rockBtn.addEventListener('click', rockFunc);
+
+function rockFunc(){
+    const computerSelection = getComputerChoice();
+
+   playRound("rock", computerSelection);
+}
+
 
 // console.log(game());
 
