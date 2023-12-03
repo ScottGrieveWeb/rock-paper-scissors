@@ -21,11 +21,13 @@ function playerSelection(){
 }
 
 const resultContainer = document.querySelector("#container");
+let resultText = document.createElement("h2");
+resultContainer.appendChild(resultText);
 
 function playRound(playerAnswer, computerSelection) {
 
-    let resultText = document.createElement("h2");
-    resultContainer.appendChild(resultText);
+
+    resultText.innerHTML = "";
 
     if (playerAnswer == "rock") {
         switch(computerSelection){
