@@ -20,19 +20,25 @@ function playerSelection(){
     return playerChoice;
 }
 
+const resultContainer = document.querySelector("#container");
+
 function playRound(playerAnswer, computerSelection) {
+
+    let resultText = document.createElement("h2");
+    resultContainer.appendChild(resultText);
+
     if (playerAnswer == "rock") {
         switch(computerSelection){
             case "rock":
-                console.log("You draw! Rock ties with Rock.");
+                resultText.innerHTML = "You draw! Rock ties with Rock.";
                 result = "draw";
                 break;
             case "paper":
-                console.log("You lose! Paper beats Rock.");
+                resultText.innerHTML = "You lose! Paper beats Rock.";
                 result = "lose";
                 break;
             case "scissors":
-                console.log("You win! Rock beats Scissors.");
+                resultText.innerHTML = "You win! Rock beats Scissors.";
                 result = "win";
                 break;
         }
@@ -103,6 +109,8 @@ function game() {
 
     }
 }
+
+
 
 
 const rockBtn = document.getElementById("rock");
