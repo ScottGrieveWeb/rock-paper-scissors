@@ -47,30 +47,30 @@ function playRound(playerAnswer, computerSelection) {
     } else if (playerAnswer == "paper") {
         switch(computerSelection){
             case "rock":
-                console.log("You win! Paper beats Rock.");
+                resultText.innerHTML = "You win! Paper beats Rock.";
                 result = "win";
                 break;
             case "paper":
-                console.log("You draw! Paper ties with Paper.");
+                resultText.innerHTML = "You draw! Paper ties with Paper.";
                 result = "draw";
                 break;
             case "scissors":
-                console.log("You lose! Paper loses to Scissors.");
+                resultText.innerHTML = "You lose! Paper loses to Scissors.";
                 result = "lose";
                 break;
         }
     } else if (playerAnswer == "scissors") {
         switch(computerSelection){
             case "rock":
-                console.log("You lose! Scissors loses to Rock.");
+                resultText.innerHTML = "You lose! Scissors loses to Rock.";
                 result = "lose";
                 break;
             case "paper":
-                console.log("You win! Scissors beat Paper.");
+                resultText.innerHTML = "You win! Scissors beat Paper.";
                 result = "win";
                 break;
             case "scissors":
-                console.log("You draw! Scissors ties with Scissors.");
+                resultText.innerHTML = "You draw! Scissors ties with Scissors.";
                 result = "draw";
                 break;
         }
