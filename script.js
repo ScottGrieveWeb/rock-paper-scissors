@@ -117,6 +117,30 @@ function rockFunc(){
 }
 
 
+const paperBtn = document.getElementById("paper");
+
+
+paperBtn.addEventListener('click', paperFunc);
+
+function paperFunc(){
+    const computerSelection = getComputerChoice();
+
+   playRound("paper", computerSelection);
+}
+
+
+const scissorsBtn = document.getElementById("scissors");
+
+
+scissorsBtn.addEventListener('click', scissorsFunc);
+
+function scissorsFunc(){
+    const computerSelection = getComputerChoice();
+
+   playRound("scissors", computerSelection);
+}
+
+
 // console.log(game());
 
 
