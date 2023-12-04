@@ -112,7 +112,13 @@ function game() {
     }
 }
 
+let scoreTracker = 0;
+let userScore = 0;
+let compScore = 0;
 
+console.log(scoreTracker);
+console.log(userScore);
+console.log(compScore);
 
 
 const rockBtn = document.getElementById("rock");
@@ -124,6 +130,29 @@ function rockFunc(){
     const computerSelection = getComputerChoice();
 
    playRound("rock", computerSelection);
+   
+   scoreTracker++;
+
+   if (result === "win"){
+    userScore++;
+   } else if (result === "lose") {
+    compScore++;
+   }
+
+   if (scoreTracker === 5){
+    if (userScore > compScore){
+        if(!alert(`You win! You beat the computer ${userScore} to ${compScore}`)){window.location.reload();}
+    } else if (userScore < compScore){
+        if(!alert(`You lose! The computer beat you ${compScore} to ${userScore}`)){window.location.reload();}
+    } else {
+        if(!alert(`It's a draw! Your ${userScore} ties with the computer's ${compScore}`)){window.location.reload();}
+    }
+
+}
+
+   console.log(scoreTracker);
+    console.log(userScore);
+    console.log(compScore);
 }
 
 
@@ -136,6 +165,29 @@ function paperFunc(){
     const computerSelection = getComputerChoice();
 
    playRound("paper", computerSelection);
+
+   scoreTracker++;
+
+   if (result === "win"){
+    userScore++;
+   } else if (result === "lose") {
+    compScore++;
+   }
+
+   if (scoreTracker === 5){
+    if (userScore > compScore){
+        if(!alert(`You win! You beat the computer ${userScore} to ${compScore}`)){window.location.reload();}
+    } else if (userScore < compScore){
+        if(!alert(`You lose! The computer beat you ${compScore} to ${userScore}`)){window.location.reload();}
+    } else {
+        if(!alert(`It's a draw! Your ${userScore} ties with the computer's ${compScore}`)){window.location.reload();}
+    }
+
+}
+
+   console.log(scoreTracker);
+    console.log(userScore);
+    console.log(compScore);
 }
 
 
@@ -148,6 +200,29 @@ function scissorsFunc(){
     const computerSelection = getComputerChoice();
 
    playRound("scissors", computerSelection);
+
+   scoreTracker++;
+
+   if (result === "win"){
+    userScore++;
+   } else if (result === "lose") {
+    compScore++;
+   }
+
+   if (scoreTracker === 5){
+    if (userScore > compScore){
+        if(!alert(`You win! You beat the computer ${userScore} to ${compScore}`)){window.location.reload();}
+    } else if (userScore < compScore){
+        if(!alert(`You lose! The computer beat you ${compScore} to ${userScore}`)){window.location.reload();}
+    } else {
+        if(!alert(`It's a draw! Your ${userScore} ties with the computer's ${compScore}`)){window.location.reload();}
+    }
+
+}
+
+   console.log(scoreTracker);
+    console.log(userScore);
+    console.log(compScore);
 }
 
 
