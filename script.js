@@ -116,9 +116,16 @@ let scoreTracker = 0;
 let userScore = 0;
 let compScore = 0;
 
-console.log(scoreTracker);
-console.log(userScore);
-console.log(compScore);
+
+const scoreDiv = document.getElementById("score");
+
+let userScoreDisplay = document.createElement("p");
+userScoreDisplay.innerHTML = `You: ${userScore}`;
+scoreDiv.append(userScoreDisplay);
+
+let compScoreDisplay = document.createElement("p");
+compScoreDisplay.innerHTML = `Computer: ${compScore}`;
+scoreDiv.append(compScoreDisplay);
 
 
 const rockBtn = document.getElementById("rock");
@@ -135,8 +142,10 @@ function rockFunc(){
 
    if (result === "win"){
     userScore++;
+    userScoreDisplay.innerHTML = `You: ${userScore}`;
    } else if (result === "lose") {
     compScore++;
+    compScoreDisplay.innerHTML = `Computer: ${compScore}`;
    }
 
    if (scoreTracker === 5){
@@ -150,13 +159,11 @@ function rockFunc(){
 
 }
 
-   console.log(scoreTracker);
-    console.log(userScore);
-    console.log(compScore);
 }
 
 
 const paperBtn = document.getElementById("paper");
+
 
 
 paperBtn.addEventListener('click', paperFunc);
@@ -170,8 +177,10 @@ function paperFunc(){
 
    if (result === "win"){
     userScore++;
+    userScoreDisplay.innerHTML = `You: ${userScore}`;
    } else if (result === "lose") {
     compScore++;
+    compScoreDisplay.innerHTML = `Computer: ${compScore}`;
    }
 
    if (scoreTracker === 5){
@@ -184,10 +193,6 @@ function paperFunc(){
     }
 
 }
-
-   console.log(scoreTracker);
-    console.log(userScore);
-    console.log(compScore);
 }
 
 
@@ -205,6 +210,7 @@ function scissorsFunc(){
 
    if (result === "win"){
     userScore++;
+    userScoreDisplay.innerHTML = `You: ${userScore}`;
    } else if (result === "lose") {
     compScore++;
    }
@@ -219,13 +225,7 @@ function scissorsFunc(){
     }
 
 }
-
-   console.log(scoreTracker);
-    console.log(userScore);
-    console.log(compScore);
 }
 
-
-// console.log(game());
 
 
