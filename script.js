@@ -80,38 +80,6 @@ function playRound(playerAnswer, computerSelection) {
 }
 
 
-function game() {
-
-    let playerScore = 0;
-    let computerScore = 0;
-
-    for (let i = 0; i < 5; i++) {
-        const playerAnswer = playerSelection();
-        const computerSelection = getComputerChoice();
-
-        let currentRound = playRound(playerAnswer, computerSelection);
-
-
-        if (result === "win"){
-            playerScore++;
-        } else if (result === "lose") {
-            computerScore++;
-        }
-
-        if (i === 4){
-            if (playerScore > computerScore){
-                console.log(`You win! You beat the computer ${playerScore} to ${computerScore}`);
-            } else if (playerScore < computerScore){
-                console.log(`You lose! The computer beat you ${computerScore} to ${playerScore}`);
-            } else {
-                console.log(`It's a draw! Your ${playerScore} ties with the computer's ${computerScore}`);
-            }
-    
-        }
-
-    }
-}
-
 let scoreTracker = 0;
 let userScore = 0;
 let compScore = 0;
