@@ -21,7 +21,7 @@ function playerSelection(){
 }
 
 const resultContainer = document.querySelector("#container");
-let resultText = document.createElement("h2");
+let resultText = document.createElement("h1");
 resultContainer.appendChild(resultText);
 
 function playRound(playerAnswer, computerSelection) {
@@ -87,11 +87,11 @@ let compScore = 0;
 
 const scoreDiv = document.getElementById("score");
 
-let userScoreDisplay = document.createElement("p");
+let userScoreDisplay = document.createElement("h3");
 userScoreDisplay.innerHTML = `You: ${userScore}`;
 scoreDiv.append(userScoreDisplay);
 
-let compScoreDisplay = document.createElement("p");
+let compScoreDisplay = document.createElement("h3");
 compScoreDisplay.innerHTML = `Computer: ${compScore}`;
 scoreDiv.append(compScoreDisplay);
 

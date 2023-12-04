@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #058C42;
+}
+
+.button-container {
+    display: flex;
+}
+
+.score {
+    display: flex;
+}
+
+button {
+    padding: 0;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: #9CFC97;
+    color: #181F1C;
+}
+
+#container,
+#score {
+    color: #181F1C;
+}
