@@ -4,7 +4,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #058C42;
+    background-color: #1c3327;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 .button-container {
@@ -26,11 +28,16 @@ button {
 }
 
 button {
-    background-color: #9CFC97;
+    background-color: #c7ddd1;
+    font-size: 50px;
     color: #181F1C;
+    padding: 20px 30px;
+    margin: 15px;
+    border-radius: 5px;
 }
 
 #container,
 #score {
-    color: #181F1C;
+    color:#c7ddd1;
+    font-size: 45px;
 }
